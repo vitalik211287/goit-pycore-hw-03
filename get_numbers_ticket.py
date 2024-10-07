@@ -22,11 +22,15 @@ def get_numbers_ticket(min: int, max: int, quantity: int) -> int:
         
         # Вибір випадкових чисел
         win_numbers = random.sample(list_numbers, k=quantity )
-        return win_numbers
+
+        # Сортування вибраних чисел
+        win_numbers_sorted = sorted(win_numbers)
+        return win_numbers_sorted
+
     except TypeError:  "Помилка: Невірний формат даних! " 
     
     
 
-print(get_numbers_ticket(1, 1000, -6))
+print(get_numbers_ticket(1, 1000, 5))
 
 
